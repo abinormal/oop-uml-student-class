@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class Student {
+    - name: String
+    - grade : GRADE
+    - group : GROUP
+    - secretNickname : String
+    + Student(name: String, grade: GRADE, group : GROUP) : void
+}
+Student "1" -- "1" GROUP : has
+Student "1" -- "1" GRADE : has
+
+enum GROUP {
+1
+2
+3
+4
+5
+}
+
+enum GRADE {
+A
+B
+C
+D
+E
+F
+}
+
+@enduml
