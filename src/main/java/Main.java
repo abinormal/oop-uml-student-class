@@ -1,17 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        Student peter = new Student("Peter", GRADE.B, 4);
-        peter.increaseGrade();
-        peter.increaseGrade();
-        System.out.println(peter.getName()+ " has grade " + peter.getGrade());
+        try {
+            Student peter = new Student("Peter", GRADE.B, 4);
+            peter.increaseGrade();
+            peter.increaseGrade();
+            System.out.println(peter.getName()+ " has grade " + peter.getGrade());
 
-        peter.decreaseGrade();
-        peter.decreaseGrade();
-        peter.decreaseGrade();
-        System.out.println(peter.getName()+ " has grade " + peter.getGrade());
+            peter.decreaseGrade();
+            peter.decreaseGrade();
+            peter.decreaseGrade();
+            System.out.println(peter.getName()+ " has grade " + peter.getGrade());
+        } catch (Exception e) {
+            System.out.println("Exception: "+ e);
+        }
 
-        Student david = new Student("David", GRADE.F, 6);
-        System.out.println(david.getName()+ " has grade " + david.getGrade());
+        try {
+            Student david = new Student("David", GRADE.F, 6);
+            System.out.println(david.getName()+ " has grade " + david.getGrade());
+        } catch (Exception e) {
+            System.out.println("Exception: "+ e);
+        }
 
         // Can't get secretNickname
         // String secret = peter.secretNickName;

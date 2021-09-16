@@ -8,14 +8,13 @@ public class Student {
     private final int group;
     private final String secretNickName = "MySecretNickName";
 
-    public Student(String name, GRADE grade, int group) {
+    public Student(String name, GRADE grade, int group) throws Exception {
         this.name = name;
         this.grade = grade;
         if (group >= 1 && group <=5) {
             this.group = group;
         } else {
-            // do something else with the number
-            this.group = 1;
+            throw new Exception("The group can only be values 1-5");
         }
     }
 
