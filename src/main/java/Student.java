@@ -5,12 +5,18 @@ enum GRADE { A, B, C, D, E, F }
 public class Student {
     private final String name;
     private GRADE grade;
-    // private GROUP group;
+    private final int group;
     private final String secretNickName = "MySecretNickName";
 
-    public Student(String name, GRADE grade) {
+    public Student(String name, GRADE grade, int group) {
         this.name = name;
         this.grade = grade;
+        if (group >= 1 && group <=5) {
+            this.group = group;
+        } else {
+            // do something else with the number
+            this.group = 1;
+        }
     }
 
     public GRADE getGrade() {
