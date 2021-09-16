@@ -5,6 +5,11 @@ public class Main {
         peter.increaseGrade();
         System.out.println(peter.getName()+ " has grade " + peter.getGrade());
 
+        peter.decreaseGrade();
+        peter.decreaseGrade();
+        peter.decreaseGrade();
+        System.out.println(peter.getName()+ " has grade " + peter.getGrade());
+
         // Can't get secretNickname
         // String secret = peter.secretNickName;
     }

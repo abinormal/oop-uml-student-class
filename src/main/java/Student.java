@@ -46,6 +46,29 @@ public class Student {
         }
     }
     public void decreaseGrade(){
+        switch (this.grade) {
+            case A:
+                System.out.println("Got a A, make it an B!");
+                this.grade = GRADE.B;
+                break;
+            case B:
+                System.out.println("Got a B, make it an C!");
+                this.grade = GRADE.C;
+                break;
+            case C:
+                System.out.println("Got a C, make it an D!");
+                this.grade = GRADE.D;
+                break;
+            case D:
+                System.out.println("Got a D, make it an E");
+                this.grade = GRADE.E;
+            case E:
+                System.out.println("Got a E, make it an F!");
+                this.grade = GRADE.F;
+                break;
+            default:
+                System.out.println("What are you trying to pull here! You have a " + this.grade);
+        }
 
     }
 }
