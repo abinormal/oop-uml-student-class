@@ -3,19 +3,19 @@
 
 class Student {
     - name: String
-    - grade : GRADE
+    - grade : Grade
     - group : int
     - secretNickname : String
-    + Student(name: String, grade: GRADE, group : int) : void
-    + getGrade() : GRADE
+    + Student(name: String, grade: Grade, group : int) : void
+    + getGrade() : Grade
     + getName(): String
     + increaseGrade(): void
     + decreaseGrade(): void
 }
 
-Student "1" -- "1" GRADE : has
+Student "1" -- "1" Grade : has
 
-enum GRADE {
+enum Grade {
 A
 B
 C

@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         try {
-            Student peter = new Student("Peter", GRADE.B, 4);
+            Student peter = new Student("Peter", Grade.B, 4);
+            System.out.println(peter.getName()+ " has grade " + peter.getGrade());
             peter.increaseGrade();
+            System.out.println(peter.getName()+ " has grade " + peter.getGrade());
             peter.increaseGrade();
             System.out.println(peter.getName()+ " has grade " + peter.getGrade());
 
@@ -15,7 +17,7 @@ public class Main {
         }
 
         try {
-            Student david = new Student("David", GRADE.F, 6);
+            Student david = new Student("David", Grade.F, 6);
             System.out.println(david.getName()+ " has grade " + david.getGrade());
         } catch (Exception e) {
             System.out.println("Exception: "+ e);
